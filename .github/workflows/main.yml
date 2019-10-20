@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: setup
+      run: make setup
+    - name: go test
+      run: make go-test
+    - name: go lint
+      run: make go-lint
