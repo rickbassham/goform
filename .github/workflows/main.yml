@@ -9,6 +9,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: setup
+      run: make setup
     - name: go test
       run: make go-test
     - name: go lint

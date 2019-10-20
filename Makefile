@@ -5,10 +5,12 @@ pre-commit: go-test go-lint go-mod-tidy go-doc
 commit:
 	@git cz
 
-setup:
-	@go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
+hooks:
 	@echo "#!/bin/bash\ncat \$$1 | commitlint" > .git/hooks/commit-msg
 	@chmod +x .git/hooks/commit-msg
+
+setup:
+	@go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
 
 utilities:
 	@go get -u github.com/robertkrimen/godocdown/godocdown
