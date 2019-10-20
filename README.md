@@ -1,4 +1,6 @@
-# goform 
+# goform
+
+[![GoDoc](https://godoc.org/github.com/rickbassham/goform?status.svg)](https://godoc.org/github.com/rickbassham/goform)
 
 Package goform is meant to make binding http data to structs easy.
 
