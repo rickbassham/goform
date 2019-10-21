@@ -34,7 +34,7 @@ go-test:
 	@go test $(GO_FOLDERS)
 
 go-lint:
-	@$$(go env GOPATH)/bin/golangci-lint run \
+	@golangci-lint run \
 	--exclude-use-default=false --disable-all \
 	--enable golint --enable gosec --enable interfacer --enable unconvert \
 	--enable goimports --enable goconst --enable gocyclo --enable misspell \
